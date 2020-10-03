@@ -1,7 +1,7 @@
 #pragma once
 #define M_PI 3.1415926535897932384
 
-class Circle : public Figure, public Point
+class Circle : public Figure
 {
 private:
     Point p; //координаты центра круга
@@ -19,7 +19,7 @@ public:
         AllFigures.push_back(*this);
     }
 
-    double  GetSquare()
+    double  GetSquare() override
     {
         return (M_PI*radius*radius);
     }

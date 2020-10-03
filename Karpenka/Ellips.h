@@ -3,7 +3,7 @@
 #include "Figure.h"
 #define M_PI 3.1415926535897932384
 
-class Ellips : Figure, Point
+class Ellips : public Figure
 {
 public:
 	Point p;
@@ -21,7 +21,7 @@ public:
 		AllFigures.push_back(*this);
 	}
 
-	double GetSquare()
+	double GetSquare() override 
 	{
 		return (M_PI * radius_1 * radius_2);
 	}

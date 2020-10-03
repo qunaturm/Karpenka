@@ -16,18 +16,18 @@ std::ostream& operator<<(std::ostream os, const Point& p)
     return os << "P{ " << p.x << ", " << p.y << std::endl << " }";
 }
 
-class Figure : Point
+class Figure : public Point
 {
 public:
     std::vector<Figure> AllFigures;
-    double GetSquare();
+    virtual double GetSquare() = 0;
 
 private:
     double GetSquareOfAllFigures(std::vector<Figure> vec)
     {
         for (Figure f : vec)
         {
-
+            f.GetSquare();
         }
     }
 };
