@@ -9,6 +9,7 @@ public:
 	Point p;
 	int radius_1;
 	int radius_2;
+
 	Ellips()
 	{
 		radius_1 = 0;

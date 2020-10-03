@@ -20,15 +20,14 @@ class Figure : public Point
 {
 public:
     std::vector<Figure> AllFigures;
-    virtual double GetSquare() = 0;
-
-private:
-    double GetSquareOfAllFigures(std::vector<Figure> vec)
-    {
-        for (Figure f : vec)
-        {
-            f.GetSquare();
-        }
-    }
+    virtual double GetSquare() = 0;    
 };
 
+static std::vector<double> GetSquareOfAllFigures(std::vector<Figure> vec)
+    {
+        std::vector<double> AllFiguresSquare;
+        for (auto f : vec)
+        {
+            AllFiguresSquare.push_back(f.GetSquare());
+        }
+    }

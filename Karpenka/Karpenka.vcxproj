@@ -144,6 +144,7 @@
     <ClInclude Include="Circle.h" />
     <ClInclude Include="Ellips.h" />
     <ClInclude Include="Figure.h" />
+    <ClInclude Include="Randomizer.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
